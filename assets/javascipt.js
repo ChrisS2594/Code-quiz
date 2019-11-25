@@ -8,10 +8,10 @@ window.onload = function() {
     let main = this.document.getElementById("main");
     this.document.getElementById("start").addEventListener("click", function (event) {
         event.preventDefault();
-        main.innerHTML =""
+        main.innerHTML ="";
 
         arkanstone();
-        let int = setInterval(timeNow, 100)
+        let int = setInterval(timeNow, 1000)
         event.stopPropagation();
         main.addEventListener("click", function (event) {
             event.preventDefault();
