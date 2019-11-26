@@ -10,7 +10,7 @@ window.onload = function() {
         event.preventDefault();
         main.innerHTML ="";
 
-        arkanstone();
+        interval();
         let int = setInterval(timeNow, 1000)
         event.stopPropagation();
         main.addEventListener("click", function (event) {
@@ -31,7 +31,7 @@ function timeNow() {
     }
 }
 
-function arkanstone() {
+function interval() {
     let question = document.createElement("p");
     question.textContent = questions[i].title;
     main.append(question);
@@ -63,14 +63,14 @@ function nextQuest() {
         i++;
 
         main.innerHTML ="";
-        arkanstone();
+        interval();
 
     }  else {
         if (choices.textContent == questions[i].answer) {
             console.log("correct");
         
         } else {
-            console.log("incoorect");
+            console.log("incorrect");
             console.log(choises.textContent)
 
             time -= 15
